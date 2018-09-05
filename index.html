@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Mini Query</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="./lib/miniquery.js" ></script>
+    <style>
+        .testStyle{
+            font-size: 25px;
+            background-color: crimson;
+            color: white;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="eyed">eyed</div>
+    <div class="klass">klass</div>
+    <a href="#hello">click me</a><br>
+    <button onclick="hide('#eyed')">Hide Eyed</button>
+    <button onclick="show('#eyed')" >Show Eyed</button>
+    <button onclick="addClass('#eyed','testStyle')">Add Class</button>
+    <button onclick="removeClass('#eyed', 'testStyle')" >Remove Class</button>
+    <script>
+        SweetSelector.select('#eyed')
+        SweetSelector.select('.klass')
+        SweetSelector.select('a')
+
+        function hide(input){
+            DOM.hide(input)
+        }
+        function show(input){
+            DOM.show(input)
+        }
+        function addClass(element, style){
+            DOM.addClass(element, style)
+        }
+        function removeClass(element, style){
+            DOM.removeClass(element, style)
+        }
+
+        EventDispatcher
+    </script>
+</body>
+</html>
